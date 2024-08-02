@@ -31,3 +31,33 @@ body {
     text-wrap: balance;
   }
 }
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  darkMode: 'class', // Enable class-based dark mode
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+  ],
+  theme: {
+    extend: {}
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@layer utilities {
+  .animate-fadeIn {
+    animation: fadeIn 1s ease-in-out;
+  }
+  .delay-2s {
+    animation-delay: 2s;
+  }
+}
